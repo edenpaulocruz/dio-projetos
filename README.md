@@ -12,3 +12,7 @@ A [Digital Innovation One](https://digitalinnovation.one/) é uma comunidade com
 A Digital Innovation One acredita que a democratização do ensino de tecnologia e a formação da nova geração de desenvolvedores de software impacta positivamente o desenvolvimento socioeconômico mundial. Estamos revolucionando a educação online com a democratização e inclusão através do ensino online gratuito e de qualidade, juntamente com as empresas mais inovadoras do mercado que procuram pelos desenvolvedores de software mais talentosos.
 
 Esse repositório visa documentar os projetos práticos realizados durante minha participação nos bootcamps.
+
+## Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
