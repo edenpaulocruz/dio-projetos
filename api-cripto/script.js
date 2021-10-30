@@ -2,7 +2,7 @@
 	'use strict'
 
 	const apikey = {
-		key: '247bba66-c74a-4472-8e6b-217647925d4b'
+		key: 'Sua API Key aqui'
 	}
 
 	fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=' + apikey.key)
