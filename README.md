@@ -13,6 +13,10 @@ A Digital Innovation One acredita que a democratização do ensino de tecnologia
 
 Esse repositório visa documentar os projetos práticos realizados durante minha participação nos bootcamps.
 
+## Projetos
+
+[Requisitando dados de uma API de criptomoedas](./api-cripto/)
+
 ## Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
