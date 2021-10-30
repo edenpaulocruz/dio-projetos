@@ -2,7 +2,9 @@
   box-sizing: border-box;
   color: inherit;
   font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
   margin: 0;
+  outline: none;
   padding: 0;
   text-align: left;
   text-decoration: none;
@@ -12,7 +14,8 @@
   background-color: #efeffc;
 }
 
-.header {
+.header,
+.footer {
   background-color: #4550a5;
   color: #fff;
   padding: 1rem 0;
@@ -66,3 +69,27 @@
   margin-bottom: .5rem;
 }
 
+.wrapper-footer {
+  align-items: center;
+  display: flex;
+  font-size: .875;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-list {
+  display: flex;
+  font-size: 1.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.social-item:nth-child(2) {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.social-item:hover {
+  color:#21264d;
+}
