@@ -4,23 +4,29 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<title>Criptomoeadas</title>
 </head>
-<body>
-	<header>
-		<h1>Criptomoedas</h1>
+<body class="body">
+	<header class="header">
+		<div class="wrapper">
+			<h1>Criptomoedas</h1>
+		</div>
 	</header>
 	<main>
-		<section class="intro">
-			<h2>O que é uma criptomoeda</h2>
-			<p>Uma <strong>criptomoeda</strong> ou <strong>cibermoeda</strong> é um meio de troca, podendo ser centralizado ou descentralizado que se utiliza da tecnologia de blockchain e da criptografia para assegurar a validade das transações e a criação de novas unidades da moeda. O Bitcoin, foi a primeira criptomoeda descentralizada criada e, desde então, muitas outras criptomoedas foram criadas.</p>
-			<p>Origem: <a href="https://pt.wikipedia.org/wiki/Criptomoeda">Wikepédia</a>, a enciclopédia livre.</p>
-		</section>
-
-		<section class="coins" data-js="coins">
-			<h2>Criptomoeadas</h2>
-			<p>Utilizando a API da <a href="https://coinmarketcap.com">Coin Market Cap</a> vamos exibir algumas criptomoedas.</p>
-		</section>
+		<div class="wrapper">
+			<section class="section">
+				<img class="img"src="https://image.freepik.com/free-vector/isometric-cryptocurrency-concept-with-bitcoins-people-mining-3d-vector-illustration_1284-29932.jpg" alt="Pessoas minerando Bitcoins">
+				<h2 class="section-title">O que é uma criptomoeda</h2>
+				<p class="text">Uma <strong>criptomoeda</strong> ou <strong>cibermoeda</strong> é um meio de troca, podendo ser centralizado ou descentralizado que se utiliza da tecnologia de blockchain e da criptografia para assegurar a validade das transações e a criação de novas unidades da moeda. O Bitcoin, foi a primeira criptomoeda descentralizada criada e, desde então, muitas outras criptomoedas foram criadas.</p>
+				<p class="origin">Origem: <a class="link" href="https://pt.wikipedia.org/wiki/Criptomoeda">Wikepédia</a>, a enciclopédia livre.</p>
+			</section>
+	
+			<section class="section" data-js="coins">
+				<h2 class="section-title">Criptomoeadas</h2>
+				<p class="text">Utilizando a API da <a class="link" href="https://coinmarketcap.com">Coin Market Cap</a> vamos exibir algumas criptomoedas.</p>
+			</section>
+		</div>
 	</main>
 	<script src="script.js"></script>
 </body>

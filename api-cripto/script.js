@@ -24,11 +24,13 @@
 		
 		const coinName = document.createElement('h3')
 		coinName.textContent = name
+		coinName.classList.add('coin-name')
 		
 		const formatedDate = formatDate(date)
 			
 		const coinDescription = document.createElement('p')
 		coinDescription.textContent = `Apareceu pela primeira vez nos registros da Coin Market Cap em ${formatedDate} e o seu símbolo é ${symbol}.`
+		coinDescription.classList.add('text')
 		
 		coinsSection.appendChild(coinName)
 		coinsSection.appendChild(coinDescription)
