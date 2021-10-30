@@ -17,20 +17,16 @@
 			<p>Origem: <a href="https://pt.wikipedia.org/wiki/Criptomoeda">Wikepédia</a>, a enciclopédia livre.</p>
 		</section>
 
-		<section class="coins">
+		<section class="coins" data-js="coins">
 			<h2>Criptomoeadas</h2>
 			<p>Utilizando a API da <a href="https://coinmarketcap.com">Coin Market Cap</a> vamos exibir algumas criptomoedas.</p>
-
-			<table data-js="coins-table">
-				<tbody></tbody>
-			</table>
 		</section>
 
 		
 	</main>
 	<script type="text/javascript">
 		// My API key
-		var apikey = {
+		const apikey = {
 			key: '247bba66-c74a-4472-8e6b-217647925d4b'
 		}
 		// GET fetch requisition
@@ -40,17 +36,44 @@
 				return response.json()
 			})
 			.then((api) => {
-				console.log(api)
-				
 				for (let i = 0; i < 10; i++) {
-					let name = api.data[i].name
-					let symbol = api.data[i].symbol
-					let first_historical_data = api.data[i].first_historical_data
+					showCoin(api.data[i].name, api.data[i].symbol, api.data[i].first_historical_data)
 				}
 			})
 			.catch((error) => {
 				console.error(error.message)
 			})
+
+		function showCoin(name, symbol, date) {
+			const coinsSection = document.querySelector('[data-js="coins"]')
+			
+			const coinName = document.createElement('h3')
+			coinName.textContent = name
+			
+			const formatedDate = formatDate(date)
+				
+			const coinDescription = document.createElement('p')
+			coinDescription.textContent = `Apareceu pela primeira vez nos registros da Coin Market Cap em ${formatedDate} e o seu símbolo é ${symbol}.`
+			
+			coinsSection.appendChild(coinName)
+			coinsSection.appendChild(coinDescription)
+		}
+
+		function formatDate(date) {
+			const temp = new Date(date)
+			const day = adicionaZero(temp.getDate().toString())
+			const month = adicionaZero((temp.getMonth()+1).toString())
+			const year = temp.getFullYear().toString()
+			
+			return `${day}/${month}/${year}`
+		}
+
+		function adicionaZero(number) {
+			if (number <= 9)
+				return "0" + number
+			else
+				return number
+		}
 	</script>
 </body>
 </html>
