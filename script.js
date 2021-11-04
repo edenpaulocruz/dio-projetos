@@ -3,7 +3,6 @@
   
   const dino = doc.querySelector('[data-js="dino"]')
   const main = doc.querySelector('[data-js="main"]')
-  const gameOver = doc.querySelector('[data-js="game-over"]')
   let position = 0
   let isJumping = false
 
