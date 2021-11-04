@@ -17,6 +17,8 @@ Esse repositório visa documentar os projetos práticos realizados durante minha
 
 [Requisitando dados de uma API de criptomoedas](./api-cripto/)
 
+[Dino Game](./dino-game/)
+
 ## Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
