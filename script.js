@@ -2,6 +2,7 @@
   'use strict'
 
   const dino = doc.querySelector('[data-js="dino"]')
+  const main = doc.querySelector('[data-js="main"]')
   let isJumping = false
 
   function handleKeyUp(event) {
@@ -32,5 +33,15 @@
     }, 20)
   }
 
+  function createCactus() {
+    const cactus = document.createElement('div')
+    let cactusPosition = 1000
+
+    cactus.classList.add('cactus')
+    cactus.style.left = cactusPosition + 'px'
+    main.appendChild(cactus)
+  }
+
+  createCactus()
   doc.addEventListener('keyup', handleKeyUp)
 })(window, document)
