@@ -1,8 +1,9 @@
 (function(win, doc) {
   'use strict'
-
+  
   const dino = doc.querySelector('[data-js="dino"]')
   const main = doc.querySelector('[data-js="main"]')
+  let position = 0
   let isJumping = false
 
   function handleKeyUp(event) {
@@ -10,7 +11,6 @@
   }
 
   function jump() {
-    let position = 0
     isJumping = true
 
     let upInterval = setInterval(() => {
@@ -46,6 +46,9 @@
       if (cactusPosition < -60) {
         clearInterval(leftInterval)
         main.removeChild(cactus)
+      } else if (cactusPosition > 0 && cactusPosition < 60 && position < 60) {
+        clearInterval(leftInterval)
+        doc.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>'
       } else {
         cactusPosition -= 10
         cactus.style.left = cactusPosition + 'px'
