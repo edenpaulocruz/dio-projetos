@@ -3,6 +3,7 @@
   
   const dino = doc.querySelector('[data-js="dino"]')
   const main = doc.querySelector('[data-js="main"]')
+  const gameOver = doc.querySelector('[data-js="game-over"]')
   let position = 0
   let isJumping = false
 
@@ -14,7 +15,7 @@
     isJumping = true
 
     let upInterval = setInterval(() => {
-      if (position >= 150) {
+      if (position >= 200) {
         clearInterval(upInterval)
         
         let downInterval = setInterval(() => {
@@ -43,12 +44,12 @@
     main.appendChild(cactus)
 
     let leftInterval = setInterval(() => {
-      if (cactusPosition < -60) {
+      if (cactusPosition < 40) {
         clearInterval(leftInterval)
         main.removeChild(cactus)
-      } else if (cactusPosition > 0 && cactusPosition < 60 && position < 60) {
+      } else if (cactusPosition > 100 && cactusPosition < 160 && position < 60) {
         clearInterval(leftInterval)
-        doc.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>'
+        doc.body.innerHTML = '<div class="game-over">Fim de jogo!</div>'
       } else {
         cactusPosition -= 10
         cactus.style.left = cactusPosition + 'px'
