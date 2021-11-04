@@ -2,13 +2,15 @@
   'use strict'
 
   const dino = doc.querySelector('[data-js="dino"]')
+  let isJumping = false
 
   function handleKeyUp(event) {
-    jump()
+    if (!isJumping) jump()
   }
 
   function jump() {
     let position = 0
+    isJumping = true
 
     let upInterval = setInterval(() => {
       if (position >= 150) {
@@ -17,6 +19,7 @@
         let downInterval = setInterval(() => {
           if (position <= 0) {
             clearInterval(downInterval)
+            isJumping = false
           } else {
             position -= 20
             dino.style.bottom = position + 'px'
